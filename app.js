@@ -15,7 +15,8 @@ var express     = require("express"),
     User    = require("./models/user"),
     seedDB = require("./seeds")
     
-  mongoose.connect("mongodb://lingyan:a123456@ds125673.mlab.com:25673/yelpcamps")
+  var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+  mongoose.connect(url);
 //mongoose.connect("mongodb://localhost/yelp_camp")
 //mongodb://lingyan:a123456@ds125673.mlab.com:25673/yelpcamps
 app.use(bodyParser.urlencoded({extended: true}));
