@@ -15,9 +15,9 @@ var express     = require("express"),
     User    = require("./models/user"),
     seedDB = require("./seeds")
     
-  
-mongoose.connect("mongodb://localhost/yelp_camp")
-
+  mongoose.connect("mongodb://lingyan:a123456@ds125673.mlab.com:25673/yelpcamps")
+//mongoose.connect("mongodb://localhost/yelp_camp")
+//mongodb://lingyan:a123456@ds125673.mlab.com:25673/yelpcamps
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.set("view engine","ejs");
